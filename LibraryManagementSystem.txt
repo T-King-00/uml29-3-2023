@@ -1,6 +1,5 @@
 As a borrower, I want to search by title, so that I can check it exists or not on database.
 As a customer, I want to reserve a book
-As a customer, I want to see book categories.
 As a customer, I want to create my borrows
 As a customer, I want to create which book has been read the most this month.
 As a customer, I want to delete book recomendation.
@@ -13,25 +12,11 @@ As a customer, I want to see the availability of books.
 As a customer, I want to see which book has been read the most this month.
 As a customer, I want to update book recomendation.
 As a customer, I want to update my borrows
-As a customer, I want to update which book has been read the most this month.
 As a librarian, I want a random book suggestion system so I can recommend to the visitors that are asked for book suggestions since I do not read books.
 As a librarian, I want to add and edit the subscribers' profiles so that I can enter their details in the system
 As a librarian, I want to add books to the library.
 As a librarian, I want to add new books
-As a librarian, I want to add new books so that members can see new books.
-As a librarian, I want to add new books to book list.
-As a librarian, I want to add new members.
-As a librarian, I want to add the new book so that I can add the new book in the system.
-As a librarian, I want to arrange book list based on authors.
-As a librarian, I want to be able to add new members
-As a librarian, I want to be able to calculate fees for delayed book returns
-As a librarian, I want to be able to see the list of overdue books.
-As a librarian, I want to be able to update members subscription plans
-As a librarian, I want to be able to update the status of a book as checked-out during check-out.
-As a librarian, I want to block unwanted members.
-As a librarian, I want to calculate the fee for delayed book returns.
-As a librarian, I want to chat with users.
-As a librarian, I want to check the maintenance dates of the books so that I can periodically.
+
 As a librarian, I want to check the number of books available for borrowing.
 As a librarian, I want to check where the books is so that I can easily find the book's shelf.
 As a librarian, I want to check which subscriber passed their due date, so that I can make a call to warn the subscribers.
@@ -98,16 +83,7 @@ As a librarian, I want to see the total number of books.
 As a librarian, I want to see when a borrowed book will return, so that I can inform the other users who demand the same book. 
 As a librarian, I want to send automatic email and sms to the customer when the due date is passed.
 As a librarian, I want to sort the unique identification numbers with the related genre of books so I can search for books easier.
-As a librarian, I want to store member information so that I can track them.
-As a librarian, I want to update book list.
-As a librarian, I want to update booklists.
-As a librarian, I want to update books shelf information
-As a librarian, I want to update information about borrowed books.
-As a librarian, I want to update pages for book information.
-As a librarian, I want to update the list of members.
-As a librarian, I want to view book prices so that I can choose books for purchase.
-As a librarian, I want to view the due dates of borrowed books so that I can inform members.
-As a librarian, I want to view the publish dates of the books.
+
 As a library employee, I want to ban a member.
 As a library employee, I want to see a member’s book reservation history.
 As a library manager, I want to assign a book to unique identification number so that I can track the books better in the database.
@@ -304,17 +280,6 @@ As a member, I want to see the shelf number of the book so that I can track the 
 As a member, I want to see the shelf number of the books that are available so that I can go to the necessary location and take it.
 As a member, I want to see the suggested books according to keywords, so that I can make my research more effectively. 
 As a member, I want to see the total number of account based penalties that are incurred, so that I will pay on time.
-As a member, I want to take recommendation.
-As a member, I want to take suggestions.
-As a member, I want to talk to the librarians.
-As a member, I want to track my reservations so that I can see whenever I can take the book.
-As a member, I want to update my reservation so that I can change the date of the reservation.
-As a member, I want to update online reservations for books.
-As a member, I want to view book genres.
-As a member, I want to view book's shelf information.
-As a member, I want to view genres of books so that I can find some materials for my research.
-As a member, I want to view my book borrowing history.
-As a member, I want to view which books I borrowed with their due dates.
 As a reader, I want to comment on books.
 As a reader, I want to see my favorite genres so that I can explore new books easily by looking at their genres.
 As a reader, I want to see the availability of the book so that I can see if I can borrow the specific book.
@@ -349,15 +314,6 @@ As a staff, I want to interact with my patrons.
 As a staff, I want to keep track of books.
 As a staff, I want to keep track of my assets.
 As a staff, I want to keep track of subscriber profiles.
-As a staff, I want to reserve a book to a member, so that I can keep track of books.
-As a Staff, I want to search book by author, so that I can quickly search for an author's book.
-As a Staff, I want to search book by name, so that I can quickly search for a book
-As a Staff, I want to search book by publication date, so that I can filter books by date.
-As a Staff, I want to search book by subject category, so that I can quickly search for a subject.
-As a staff, I want to specify unique id number for each book, so that I can keep track of books.
-As a staff, I want to update book checkouts if there is any change.
-As a staff, I want to update subscriber's subscription types.
-As a staff, I want to update the book's availability.
 As a student, I want to ask for books that are currently unavailable
 As a student, I want to be able to search for a specific author
 As a student, I want to be able to search for a specific genre
@@ -375,10 +331,3 @@ As a user, I want to create booklists
 As a user, I want to see other users profiles.
 As a user, I want to see the list of books.
 As a user, I want to see the remaining days to return the book so that I can prevent paying a fine.
-As an employee, I want to log my work times.
-As an librarian, I want to calculate fines for the due date.
-As an librarian, I want to create books in the library.
-As an librarian, I want to delete books in the library.
-As an librarian, I want to read books in the library.
-As an librarian, I want to remove books from the library.
-As an librarian, I want to update books in the library.
