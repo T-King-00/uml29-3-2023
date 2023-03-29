@@ -36,7 +36,7 @@ def ruleC1(sentence):
                     possibleClasses.append ( token.lemma_ + '_' + sentence [ i + 1 ].lemma_ )
                     skip_next = True  # Skip the next token
                 # Check if the next token is a gerund
-                elif sentence [ i + 1 ].tag_ == "VBG":
+                elif sentence [ i + 1 ].tag_ == "VBG" and  sentence.__len__()!=i+1:
                     possibleClasses.append ( token.lemma_ + '_' + sentence [ i + 1 ].text )
                     skip_next = True  # Skip the next token
 
@@ -77,11 +77,9 @@ def findPossible_ClassFor_Att(att,classesFromFreq,ClassEntities):
 
 def isAttribute(att):
     business_env = [ "people","database", "record", "system", "information", "organization", "detail", "website", "computer" ]
-    att = helperFunctions.nlp ( att )
 
     for tok in att:
         if att in business_env:
-            if tok.pos_=="PROPN" :
-                return False
+            return False
         else:
             return True

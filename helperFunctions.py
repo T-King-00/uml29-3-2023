@@ -122,3 +122,22 @@ def isExists(x,list):
         return True
     else:
         return False
+
+
+def get_token_sentences(sentences):
+    list=[]
+
+    for i, sentence in enumerate ( sentences ):
+        listOfTokens = [ ]
+        v = sentences [ i ].find ( "so that" )
+        sentences [ i ] = sentences [ i ] [ 0:v ]
+        sentence = sentences [ i ].lower ()
+        sentence = nlp ( sentence )
+        for token in sentence:
+            listOfTokens.append(token)
+        list.append(listOfTokens)
+
+    return listOfTokens
+
+
+

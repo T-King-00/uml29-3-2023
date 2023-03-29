@@ -77,17 +77,25 @@ class UserStory ():
         pattern0 = [ [ {"POS": "VERB"}, {"POS": "DET"}, {"POS": "NOUN"} ],
                      [ {"POS": "VERB"}, {"POS": "NOUN"}, {"POS": "ADP"}, {"POS": "VERB"}, {"POS": "NOUN"} ]
                      ]
-
-        pattern1 = [ {"POS": "VERB"}, {"POS": "NOUN"} ]
+        want_nounPattern = [ {"lower": "want"}, {"POS": "NOUN"}, {"POS": "PART", "OP": "*"},
+                             {"POS": "VERB"} ]
 
         pattern2 = [ {"POS": "VERB"}, {"POS": "NOUN"}, {"POS": "PART"}, {"POS": "AUX"}, {"POS": "VERB"} ]
-        pattern3 = [ {"LOWER": "want"}, {"LOWER": "to"}, {"POS": "VERB"}, {"POS": "DET", "OP": "*"}, {"POS": "NOUN"} ]
+        pattern3 = [ {"POS": "VERB"}, {"POS": "DET", "OP": "*"}, {"POS": "NOUN"} ]
         pattern4 = [ {"POS": "VERB"}, {"POS": "ADP"}, {"POS": "NOUN"} ]
+        pattern5 = [ {"DEP": "dobj", "POS": "NOUN"}, {"DEP": "amod"}, {"DEP": "prep"}, {"DEP": "pobj"} ]
+        pattern6 = [ {"DEP": "root"}, {"DEP": "dobj"}, {"DEP": "prep"}, {"POS": "PRON", "OP": "*"},
+                     {"POS": "NOUN", "OP": "+"} ]
+        pattern1 = [ {"POS": "VERB"}, {"POS": "NOUN"} ]
+
+        matcher.add ( "want_nounPattern", [ want_nounPattern ] )
         matcher.add ( "verbPhrase2", [ pattern2 ] )
         matcher.add ( "verbPhrase3", [ pattern3 ] )
         matcher.add ( "verbPhrase", pattern0 )
         matcher.add ( "verbPhrase4", [ pattern4 ] )
 
+        matcher.add ( "pattern5", [ pattern5 ] )
+        matcher.add ( "pattern6", [ pattern6 ] )
         matcher.add ( "verb-want-noun", [ pattern1 ] )
 
         matches = matcher ( x )
@@ -99,11 +107,15 @@ class UserStory ():
                     continue
             if string_id == "verbPhrase2":
                 verb4 = span [ 4 ].lemma_
-                nounx = span [ 1 ].text
+                nounx = span [ 1 ].lemma_
                 newSentence = verb4 + " " + nounx
                 span = newSentence
-            compoundVerbs.append ( span )
+            if span is not None:  #
+                compoundVerbs.append ( span )
             if span is not None:  # to get only the fist part of use case .
                 break
+
         pprint ( compoundVerbs )
+        compoundVerbs = list ( dict.fromkeys ( compoundVerbs ) )
+
         return compoundVerbs, actor

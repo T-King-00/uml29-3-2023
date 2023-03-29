@@ -19,10 +19,10 @@ class UseCaseModel ( PlantUml ):
         super ().__init__ ( fileName )
 
     def addActor(self, actorName):
-        self.file.write ( f""" \"{actorName}\" as {actorName}\n""" )
+        self.file.write ( f""": {actorName}:\n""" )
 
     def addUseCase(self, useCaseName):
-        self.file.write ( f""" \"{useCaseName}\" as ({useCaseName})\n""" )
+        self.file.write ( f""" usecase "{useCaseName}" \n""" )
 
     def addUseCasetoActor(self, actorName, useCaseName):
         self.file.write ( f""" :{actorName}: --> ({useCaseName})\n""" )
@@ -37,9 +37,7 @@ class UseCaseModel ( PlantUml ):
 ########################################
 # Secondchild
 class ClassModel ( PlantUml ):
-
     def __init__(self, fileName):
-        ###call parent class constructor
         super ().__init__ ( fileName )
 
     ##Declaring classes
